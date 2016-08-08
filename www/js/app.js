@@ -6,6 +6,11 @@ angular.module('hackathon', [
   'ionic'
   , 'app.home'
   , 'app.login'
+  , 'app.directives'
+  , 'app.factory'
+  , 'app.services'
+  , 'app.filters'
+  , 'app.validators'
 ])
 
 .run(function($ionicPlatform, $rootScope, $ionicHistory) {
