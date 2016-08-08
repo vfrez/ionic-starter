@@ -4,8 +4,8 @@
 
 angular.module('hackathon', [
   'ionic'
-  , 'app.home'
-  , 'app.login'
+  , 'app.homeCtrl'
+  , 'app.loginCtrl'
   , 'app.directives'
   , 'app.factory'
   , 'app.services'
@@ -34,15 +34,28 @@ angular.module('hackathon', [
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-    .state('login', {
-      url: '/login'
-      , templateUrl: 'views/login/login.html'
-      , controller:'login.ctrl'
+    .state('app', {
+      url: "/app",
+      abstract: true,
+      templateUrl: "views/menu/menu.html"
     })
-    .state('home', {
-      url: '/home'
-      , templateUrl: 'views/home/home.html'
-      , controller:'home.ctrl'
-    });
-  $urlRouterProvider.otherwise('/login');
+    .state('app.login', {
+      url: "/login",
+      views: {
+        'appContent' :{
+          templateUrl: 'views/login/login.html'
+          , controller:'login.ctrl'
+        }
+      }
+    })
+    .state('app.home', {
+      url: "/home",
+      views: {
+        'appContent' :{
+          templateUrl: 'views/home/home.html'
+          , controller:'home.ctrl'
+        }
+      }
+    })
+  $urlRouterProvider.otherwise('/app/login');
 })
