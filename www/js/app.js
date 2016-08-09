@@ -35,9 +35,9 @@ angular.module('hackathon', [
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('app', {
-      url: "/app",
-      abstract: true,
-      templateUrl: "views/menu/menu.html"
+      url: "/app"
+      , abstract: true
+      , templateUrl: "views/menu/menu.html"
     })
     .state('app.login', {
       url: "/login",

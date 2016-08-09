@@ -1,9 +1,12 @@
-<ion-view title="Login">
-  <ion-nav-buttons side="left">
-    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-  </ion-nav-buttons>
+<ion-view title="Login" hide-nav-bar="true">
+  <div class="bar bar-header bar-custon-1">
+   <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    <h1 class="title">Login</h1>
+  </div>
   <ion-content class="has-header">
+    <div class="container">
       <button class="button button-block" ng-click="goHome()">Go to home</button>
-      <button class="button button-block" ng-click="menu = !menu">Menu</button>
+      <button class="button button-block" menu-toogle="left">Menu</button>
+    </div>
   </ion-content>
 </ion-view>
