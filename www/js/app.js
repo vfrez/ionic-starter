@@ -31,6 +31,10 @@ angular.module('hackathon', [
     $rootScope.goTo = function(state){
       $state.go(state);
     };
+    /**
+     * @Todo - Força passar pelo login
+     */
+    $state.go('app.login');
   });
 
   /**

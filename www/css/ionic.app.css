@@ -9838,7 +9838,10 @@ input {
   background: #f8f8f8;
   padding: 10px 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 3px; }
+  border-radius: 3px;
+  position: absolute;
+  width: calc(100% - 20px);
+  top: 100px; }
 
 .button-round {
   width: calc(100% - 20px);
@@ -9862,7 +9865,8 @@ input {
   margin-top: 40px;
   position: relative;
   left: 50%;
-  margin-left: -75px; }
+  margin-left: -75px;
+  z-index: 9; }
 
 .hide-logo {
   opacity: 0;
@@ -10017,3 +10021,11 @@ input {
   top: 18px;
   width: 0%;
   left: 50%; }
+
+.menu-content {
+  background: #28644a; }
+  .menu-content .menu-image {
+    width: 100%;
+    height: 200px;
+    background: url(./image/menu-fundo.jpg);
+    background-size: 100% 100%; }
