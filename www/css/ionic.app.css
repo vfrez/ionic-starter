@@ -9825,10 +9825,10 @@ a.button {
     color: #00a739; }
 
 input {
-  border-bottom: solid 1px !important;
+  border-bottom: solid 1px #ccc !important;
   transition: .2s all ease-in-out; }
   input:focus {
-    border-bottom: solid 1px #1bbc9b !important; }
+    border-bottom: solid 1px #00a739 !important; }
 
 .item-floating-label {
   padding-left: 0; }
@@ -9837,7 +9837,7 @@ input {
   margin: 10px;
   background: #f8f8f8;
   padding: 10px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 3px; }
 
 .button-round {
@@ -9881,6 +9881,7 @@ input {
   animation: show-ball 0.5s forwards;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   margin: 75px; }
   .ball .image {
     width: 80px;
