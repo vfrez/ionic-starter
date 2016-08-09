@@ -1,12 +1,32 @@
 <ion-view title="Login" hide-nav-bar="true">
-  <div class="bar bar-header bar-custon-1">
-   <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-    <h1 class="title">Login</h1>
-  </div>
-  <ion-content class="has-header">
-    <div class="container">
-      <button class="button button-block" ng-click="goHome()">Go to home</button>
-      <button class="button button-block" menu-toogle="left">Menu</button>
+  <!--<div class="bar bar-header bar-custon-1">-->
+  <!-- <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>-->
+  <!--  <h1 class="title">Login</h1>-->
+  <!--</div>-->
+  <ion-content class="login-screen">
+    
+    <div class="logo">
+        <div class="ball">
+          <div class="image"></div>
+	      </div>
+    </div>
+    
+    <div class="container hide-logo">
+      <div class="form">
+        <div class="row">
+          <div class="col">
+            <label class="item-input item-floating-label">
+              <span class="input-label">First Name</span>
+              <input type="text" placeholder="First Name">
+            </label>
+          </div>
+        </div>
+        
+        <button class="button-round" ng-click="goHome()">
+          Entrar
+        </button>
+      </div>
+      
     </div>
   </ion-content>
 </ion-view>
