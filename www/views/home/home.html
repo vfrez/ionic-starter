@@ -1,9 +1,37 @@
-<ion-view title="Home" hide-nav-bar="true">
+<ion-view title="Home" hide-nav-bar="true" can-swipe-back="true">
   <div class="bar bar-header bar-custon-1">
-    <button class="button button-clear icon ion-ios-arrow-back" ng-click="back()"></button>
+    <button class="button button-clear icon">
+      <toogle-menu></toogle-menu>
+    </button>
     <h1 class="title">Home</h1>
+    <button class="button button-clear icon ion-ios-cog-outline" ng-click="goTo('app.settings')"></button>
   </div>
   <ion-content class="has-header content">
     <h1 class="center">Home</h1>
+    <div class="row">
+      <div class="col">
+        <label class="item-input item-floating-label">
+          <span class="input-label">Nome</span>
+          <input type="text" placeholder="Nome">
+        </label>
+      </div>
+      <div class="col">
+        <label class="item-input item-floating-label">
+          <span class="input-label">Sobrenome</span>
+          <input type="text" placeholder="Sobrenome">
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label class="item-input item-floating-label">
+          <span class="input-label">CPF</span>
+          <input type="text" placeholder="CPF">
+        </label>
+      </div>
+    </div>
+    <button class="button-round">
+      Continue
+    </button>
   </ion-content>
 </ion-view>

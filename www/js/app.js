@@ -6,6 +6,7 @@ angular.module('hackathon', [
   'ionic'
   , 'app.homeCtrl'
   , 'app.loginCtrl'
+  , 'app.settingsCtrl'
   , 'app.directives'
   , 'app.factory'
   , 'app.services'
@@ -13,7 +14,7 @@ angular.module('hackathon', [
   , 'app.validators'
 ])
 
-.run(function($ionicPlatform, $rootScope, $ionicHistory) {
+.run(function($ionicPlatform, $rootScope, $ionicHistory, $state) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -22,6 +23,14 @@ angular.module('hackathon', [
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    /**
+     * @todo - Função para redirecionar a aplicação
+     * @param {String} - estado no qual vai ser alterado
+     */
+    $rootScope.goTo = function(state){
+      $state.go(state);
+    };
   });
 
   /**
@@ -54,6 +63,15 @@ angular.module('hackathon', [
         'appContent' :{
           templateUrl: 'views/home/home.html'
           , controller:'home.ctrl'
+        }
+      }
+    })
+    .state('app.settings', {
+      url: "/settings",
+      views: {
+        'appContent' :{
+          templateUrl: 'views/settings/settings.html'
+          , controller:'settings.ctrl'
         }
       }
     })
