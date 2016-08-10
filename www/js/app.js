@@ -14,7 +14,7 @@ angular.module('hackathon', [
   , 'app.validators'
 ])
 
-.run(function($ionicPlatform, $rootScope, $ionicHistory, $state) {
+.run(function($ionicPlatform, $rootScope, $ionicHistory, $state, $ionicSideMenuDelegate) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -29,6 +29,12 @@ angular.module('hackathon', [
      * @param {String} - estado no qual vai ser alterado
      */
     $rootScope.goTo = function(state){
+      /**
+       * @Todo - Caso o menu esteja aberto, ele fecha
+       */
+      if($ionicSideMenuDelegate.isOpenLeft()) {
+        $ionicSideMenuDelegate.toggleLeft();
+      }
       $state.go(state);
     };
     /**

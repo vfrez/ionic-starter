@@ -10029,3 +10029,9 @@ input {
     height: 200px;
     background: url(./image/menu-fundo.jpg);
     background-size: 100% 100%; }
+
+.menu-list li {
+  color: #ffffff;
+  padding: 10px 0;
+  margin: 10px;
+  font-size: 23px; }

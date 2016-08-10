@@ -9,12 +9,14 @@
       <div class="menu-image"></div>
       <!--Conteudo menu -->
       <ul class="menu-list">
-          <li>
-            Item 01
+          <li ng-click="goTo('app.home')">
+            <span class="icon ion-ios-home"></span>
+            Home
           </li>
-          <li>Item 02</li>
-          <li>Item 03</li>
-          <li>Item 04</li>
+          <li ng-click="goTo('app.settings')">
+            <span class="icon ion-ios-cog-outline"></span>
+            Ajustes
+          </li>
       </ul>
     </ion-content>
   </ion-side-menu>
