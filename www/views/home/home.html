@@ -1,4 +1,5 @@
 <ion-view title="Home" hide-nav-bar="true" can-swipe-back="true">
+  <ion-error></ion-error>
   <div class="bar bar-header bar-custon-1">
     <button class="button button-clear icon">
       <toogle-menu></toogle-menu>
@@ -30,8 +31,8 @@
         </label>
       </div>
     </div>
-    <button class="button-round">
-      Continue
+    <button class="button-round" ng-click="showError('Test message error')">
+      Show error
     </button>
   </ion-content>
 </ion-view>

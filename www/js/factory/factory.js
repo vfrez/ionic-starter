@@ -10,5 +10,5 @@ angular.module('app.factory', [])
               <div class="spinner"></div>
             </div>
         `
-    }
+    };
 })

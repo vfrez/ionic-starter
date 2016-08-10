@@ -4,6 +4,12 @@
 angular.module('app.homeCtrl', [])
 
 .controller('home.ctrl', function($scope, $state, $ionicSideMenuDelegate, $timeout){
+    // Inicializa o objeto de erros
+    $scope.error = {
+        status:false
+        , message:''
+    };
+    
     /**
      * @todo - Responsalvel para escutar se o menu está aberto ou não e jogar um valor booleano para a váriavel de controle na view
      */
@@ -19,5 +25,18 @@ angular.module('app.homeCtrl', [])
      */
     $scope.openMenu = function(){
         $ionicSideMenuDelegate.toggleLeft();
+    };
+
+    $scope.showError = function(){
+        if(!$scope.error.status){
+            $scope.error = {
+                status:true
+                , message:'Error message test'
+            };
+            setTimeout(function(){
+                $scope.error.status = false;
+                $scope.$apply();
+            }, 8000);
+        }
     };
 })

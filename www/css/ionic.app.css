@@ -27,6 +27,7 @@ $dark:                            #444 !default;
   Modified icons to fit ionicon’s grid from original.
 */
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 @font-face {
   font-family: "Ionicons";
   src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1");
@@ -9853,11 +9854,14 @@ input {
   margin: 10px;
   border: 0;
   border-radius: 60px;
-  box-shadow: 0 5px 20px rgba(0, 167, 57, 0.5);
-  background: #00a739;
-  color: #ffffff; }
+  box-shadow: 0 5px 20px rgba(67, 239, 118, 0.5);
+  background: #43ef76;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: Lato !important;
+  transition: all 0.2s ease-in-out; }
   .button-round:active {
-    background: #067b63; }
+    background: #51d879; }
 
 .login-screen {
   background: rgba(0, 167, 57, 0.12); }
@@ -9959,11 +9963,12 @@ input {
   background: transparent; }
 
 #nav-icon3 {
-  width: 28px;
+  width: 23px;
   height: 28px;
   margin: 0 6px;
   position: relative;
   z-index: 99;
+  cursor: pointer;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -9971,8 +9976,7 @@ input {
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer; }
+  transition: .5s ease-in-out; }
 
 #nav-icon3 span {
   display: block;
@@ -9999,7 +10003,7 @@ input {
   top: 0px; }
 
 #nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
-  top: 18px; }
+  top: 16px; }
 
 #nav-icon3 span:nth-child(4) {
   top: 8px; }
@@ -10074,3 +10078,17 @@ input {
   height: 100%;
   background: transparent;
   border-radius: 50%; }
+
+.errors-UI {
+  width: 100%;
+  color: #ffffff;
+  background: #FF1744;
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  padding: 25px 0;
+  top: -120px;
+  transition: .4s all ease-in-out; }
+
+.errors-show {
+  top: 0; }

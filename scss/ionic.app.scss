@@ -21,8 +21,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 
-*{
+* {
     font-family:'Raleway'!important;
 }
 
@@ -30,10 +31,16 @@ $principal:rgba(0, 167, 57, 1);
 $content:rgba(0, 167, 57, .12);
 $loading-color-principal:rgba(0, 167, 57, 1);
 $loading-color-secundario:rgba(0, 167, 57, .6);
-$btn-color-active:#067b63;
+
+$button-color:rgba(67, 239, 118, 1);
+$button-color-active:#51d879;
+$button-glow-color:rgba(67, 239, 118, .5);
+
 $card-fundo:#f8f8f8;
-$white:#ffffff;
 $ball-size:150px;
+
+$white:#ffffff;
+$red:#FF1744;
 
 .bar-custon-1{
     background:$white;
@@ -46,7 +53,6 @@ $ball-size:150px;
         color:$principal;
     }
 }
-
 
 input{
     border-bottom:solid 1px #ccc!important;
@@ -77,11 +83,14 @@ input{
     margin:10px;
     border:0;
     border-radius:60px;
-	box-shadow: 0 5px 20px rgba(0, 167, 57, .5);
-    background:$principal;
+	box-shadow: 0 5px 20px $button-glow-color;
+    background:$button-color;
     color:$white;
+    text-transform:uppercase;
+    font-family:Lato!important;
+    transition: all 0.2s ease-in-out;
     &:active{
-        background:$btn-color-active;
+        background:$button-color-active;
     }
 }
 
@@ -208,22 +217,21 @@ input{
 }
 
 // Hamburger menu
-
 #nav-icon3{
-  width: 28px;
+  width: 23px;
   height: 28px;
   margin:0 6px;
   position: relative;
   z-index:99;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
   cursor: pointer;
+   -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+           transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+     -moz-transition: .5s ease-in-out;
+       -o-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
 }
 
 #nav-icon3 span{
@@ -235,14 +243,14 @@ input{
   opacity: 1;
   left: 0;
   margin-top:6px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
+   -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+           transform: rotate(0deg);
   -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+     -moz-transition: .25s ease-in-out;
+       -o-transition: .25s ease-in-out;
+          transition: .25s ease-in-out;
 }
 
 .open{
@@ -256,7 +264,7 @@ input{
 }
 
 #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-  top: 18px;
+  top: 16px;
 }
 
 #nav-icon3 span:nth-child(4) {
@@ -271,16 +279,16 @@ input{
 
 #nav-icon3.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+         transform: rotate(45deg);
 }
 
 #nav-icon3.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 #nav-icon3.open span:nth-child(4) {
@@ -352,4 +360,20 @@ input{
         background:transparent;
         border-radius:50%;
     }
+}
+
+.errors-UI {
+    width: 100%;
+    color: $white;
+    background: $red;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    padding: 25px 0;
+    top:-120px;
+    transition:.4s all ease-in-out;
+}
+
+.errors-show {
+    top:0;
 }
