@@ -3,14 +3,9 @@
 
 angular.module('app.loginCtrl', [])
 
-.controller('login.ctrl', function($scope, $rootScope, $state, $ionicLoading){
+.controller('login.ctrl', function($scope, $rootScope, $state, $ionicLoading, LoadingTemplate){
     $scope.goHome = function(){
-        $ionicLoading.show({
-            template: `
-            <div class="loader">
-                <div class="spinner"></div>
-            </div>`
-        });
+        $ionicLoading.show(LoadingTemplate);
         setTimeout(function(){
             $ionicLoading.hide();
             $state.go('app.home');
