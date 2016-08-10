@@ -30,11 +30,9 @@ angular.module('hackathon', [
      */
     $rootScope.goTo = function(state){
       /**
-       * @Todo - Caso o menu esteja aberto, ele fecha
-       */
-      if($ionicSideMenuDelegate.isOpenLeft()) {
-        $ionicSideMenuDelegate.toggleLeft();
-      }
+      * @Todo - Caso o menu esteja aberto, ele fecha
+      */
+      $ionicSideMenuDelegate.isOpenLeft() ? $ionicSideMenuDelegate.toggleLeft() : null;
       $state.go(state);
     };
     /**

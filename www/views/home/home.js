@@ -7,7 +7,7 @@ angular.module('app.homeCtrl', [])
     /**
      * @todo - Responsalvel para escutar se o menu está aberto ou não e jogar um valor booleano para a váriavel de controle na view
      */
-    $scope.$watch(function (){
+    $scope.$watch(function () {
         return $ionicSideMenuDelegate.isOpenLeft();
     }, function (isOpen) {
         $timeout(function(){

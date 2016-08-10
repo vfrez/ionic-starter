@@ -3,14 +3,21 @@
 
 angular.module('app.loginCtrl', [])
 
-.controller('login.ctrl', function($scope, $rootScope, $state){
+.controller('login.ctrl', function($scope, $rootScope, $state, $ionicLoading){
     $scope.goHome = function(){
-        $state.go('app.home');
+        $ionicLoading.show({
+            template: `
+            <div class="loader">
+                <div class="spinner"></div>
+            </div>`
+        });
+        setTimeout(function(){
+            $ionicLoading.hide();
+            $state.go('app.home');
+        },1000);
     };
-    
-    $scope.menu = false;
-    
+
     $scope.closeMenu = function(){
         console.log('close menu');
-    }
+    };
 })

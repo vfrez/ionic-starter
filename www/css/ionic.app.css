@@ -26,6 +26,7 @@ $dark:                            #444 !default;
   used under CC BY http://creativecommons.org/licenses/by/4.0/
   Modified icons to fit ionicon’s grid from original.
 */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 @font-face {
   font-family: "Ionicons";
   src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1");
@@ -9815,6 +9816,9 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+* {
+  font-family: "Raleway" !important; }
+
 .bar-custon-1 {
   background: #ffffff;
   color: #00a739;
@@ -9837,7 +9841,7 @@ input {
   margin: 10px;
   background: #f8f8f8;
   padding: 10px 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 3px;
   position: absolute;
   width: calc(100% - 20px);
@@ -9856,7 +9860,7 @@ input {
     background: #067b63; }
 
 .login-screen {
-  background: #00a739; }
+  background: rgba(0, 167, 57, 0.12); }
 
 /* logo */
 .logo {
@@ -9885,7 +9889,7 @@ input {
   animation: show-ball 0.5s forwards;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin: 75px; }
   .ball .image {
     width: 80px;
@@ -10033,5 +10037,40 @@ input {
 .menu-list li {
   color: #ffffff;
   padding: 10px 0;
-  margin: 10px;
-  font-size: 23px; }
+  margin: 10px; }
+  .menu-list li .icon {
+    font-size: 23px; }
+  .menu-list li .text {
+    position: absolute;
+    margin: 3px 15px; }
+
+.spinner {
+  height: 30px;
+  width: 30px;
+  border: 6px solid rgba(0, 167, 57, 0.6);
+  border-top-color: #00a739;
+  border-radius: 100%;
+  animation: rotation-spinner 1s infinite linear 0.25s;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px; }
+
+@keyframes rotation-spinner {
+  from {
+    opacity: 1;
+    transform: rotate(0deg); }
+  to {
+    opacity: 1;
+    transform: rotate(359deg); } }
+
+.backdrop {
+  background: rgba(255, 255, 255, 0.6); }
+
+.loading-container .loading {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 50%; }
